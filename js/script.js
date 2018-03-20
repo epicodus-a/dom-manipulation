@@ -11,6 +11,7 @@ $(document).ready(function() {
   });
   });
 
+
   $("button#goodbye").click(function() {
     $("ul#user").prepend("<li>Goodbye!</li>");
     $("ul#webpage").prepend("<li>Goodbye, dear user!</li>");
@@ -36,5 +37,42 @@ $(document).ready(function() {
   });
 
   });
+
+
+  //cat vs dog
+  $("button#cat").click(function() {
+    $("ul#cat").prepend("<li>mow</li>");
+    // $("ul#dog").prepend("<li>bark!</li>");
+
+    $("ul#cat").children("li").first().click(function() {
+    $("ul#cat li").removeClass( "bg-pink" );
+    $(this).addClass("bg-pink");
+  });
+
+  $("ul#dog").removeClass("bg-pink");
+
+  // $("ul#dog").children("li").first().click(function() {
+  //   $(this).addClass("bg-pink");
+  // });
+  });
+
+  $("button#dog").click(function() {
+    // $("ul#cat").prepend("<li>mow</li>");
+
+    $("ul#dog").prepend("<li>bark!</li>");
+
+  //   $("ul#cat").children("li").first().click(function() {
+  //   $(this).addClass("bg-pink");
+  // });
+  $("ul#dog").children("li").first().click(function() {
+    $("ul#dog li").removeClass( "bg-pink" );
+    $(this).addClass("bg-pink");
+  });
+
+  $("ul#cat").removeClass("bg-pink");
+
+});
+
+
 
 });
